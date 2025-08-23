@@ -6,6 +6,10 @@ __pycache__/
 terraform/
 virtual-env/
 .DS_Store
+*.tfvars
+.terraform/
+terraform.tfstate.d
+.terraform.lock.hcl
 
 # C extensions
 *.so

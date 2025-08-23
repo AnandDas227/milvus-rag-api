@@ -1,0 +1,47 @@
+# Code Engine Variables
+
+# Configured manually
+ce_project_id = "" # project GUID
+ce_registry_secret = "" # existing registry secret
+ce_ssh_secret = "" # existing ssh secret
+is_private_repo = true
+region = ""   # Region where this app is to be deployed
+
+# Configured via Terraform
+
+ibmcloud_api_key = "" # See https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key
+cr = "" # registry (ex: us.icr.io)
+create_duration = "" # time to wait for image build (ex: 10m)
+source_url = "" # Github repo url (https://github.com/AnandDas227/milvus-rag-api.git)
+ce_app_port =  # listening port (ex: 4050)
+ce_app_config_scale_min =  # min instances (ex: 1)
+ce_app_config_scale_max =  # max instances (ex: 2)
+ce_app_ephemeral_storage = "" # ephemeral storage (ex: 12040M)
+ce_app_cpu = "" # cpu limit (ex: 4)
+ce_app_memory = "" # RAM limit (ex: 16G)
+
+# change per app
+ce_buildname = "" # build name
+cr_namespace = ""     # Container Registry Namespace
+cr_imagename = "" # Build image name
+source_revision = "" # Github repo branch to pull from
+source_context_dir = "" # Subdirectory where Dockerfile and application files are located
+ce_app_name = ""
+
+# Application Env Variables
+# copy from .env
+app_env_vars = {
+    "WXD_MILVUS_HOST"=""
+    "WXD_MILVUS_PORT"=""
+    "WXD_MILVUS_USER"=""
+    "WXD_MILVUS_PASSWORD"=""
+    "WATSONX_MODEL_ID"=""
+    "WATSONX_PROJECT_ID"=""
+    "WATSONX_APIKEY"=""
+    "WATSONX_URL"=""
+    "IBM_CLOUD_API_KEY"=""
+    "COS_ENDPOINT"=""
+    "COS_AUTH_ENDPOINT"=""
+    "COS_SERVICE_INSTANCE_ID"=""
+    "REST_API_KEY"=""
+}
